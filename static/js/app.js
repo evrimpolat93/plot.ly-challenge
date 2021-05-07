@@ -35,9 +35,7 @@ function init() {
         title: '<b>OTU Ids To Sample Values </b>',
         xaxis: { title: "OTU Ids" },
         yaxis: { title: "Sample Values" }
-        // showlegend: false,
-        // height: 600,
-        // width: 600
+       
     };
     Plotly.newPlot("bubble", bubbleData, layoutBubble)
     // ----------------------------------------------------------
