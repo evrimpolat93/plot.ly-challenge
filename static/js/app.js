@@ -2,8 +2,9 @@ json_path = "samples.json"
 
 function init() {
     dataBar = [{
-        x: [5, 6, 7, 8],
         // values
+        x: [5, 6, 7, 8],
+        // labels
         y: ["A", "B", "C", "D"],
         // texthover
         text: ['A', 'B', 'C', 'D'],
