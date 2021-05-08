@@ -187,11 +187,10 @@ function updatePage() {
                     color: '850000'
                 }
             }],
-            title: '<b>Belly Button Washing Frequancy</b> <br> Scrups per week',
-            // height: 1000,
-            // width: 1000,
+            title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per week',
+            
             xaxis: {
-                // disapeare x accordinater 
+                
                 zeroline: false, showticklabels: false,
                 showgrid: false, range: [-1, 1]
             },
