@@ -165,10 +165,8 @@ function updatePage() {
                 colors: ['#FF00FF', '#DA70D6',
                     '#C71585', '#DB7093',
                     '#FF1493', '#FF69B4	',
-                    // put 50 half of pie white color
                     '#FFB6C1	', '#FFC0CB	', '#FAEBD7	', 'white'],
                 labels: ['0-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9'],
-                // hoverinfo: 'label'
 
 
             },
@@ -179,7 +177,7 @@ function updatePage() {
         }];
         var gaugelayout = {
             shapes: [{
-                // tringel formate 
+                
                 type: 'path',
                 path: path,
                 fillcolor: '850000',
@@ -202,7 +200,7 @@ function updatePage() {
 
         }
 
-        // var gaugeLayout = { width: 600, height: 400 };
+    
         Plotly.newPlot('gauge', gaugeData, gaugelayout);
 
     });
