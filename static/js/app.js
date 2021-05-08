@@ -68,7 +68,7 @@ function updatePage() {
     var dropdownMenu = d3.selectAll("#selDataset").node();
     // Assign the dropdown menu option to a variable
     let selectedOption = dropdownMenu.value;
-    // console.log(selectedOption);
+    
     // filter data from the user 
     otuIdsFilter = sample.filter(row => row.id === selectedOption)[0];
 
@@ -107,7 +107,7 @@ function updatePage() {
         metadataFilter = metadata1.filter(row => row.id === parseInt(selectedOption))[0];
         console.log("metadataFilter", metadataFilter)
 
-        // console.log("metadataFilter",Object.keys(metadataFilter).length)
+       
         let para = ""
         for (var key in metadataFilter) {
             para += key + ": " + metadataFilter[key] + "<br>"
