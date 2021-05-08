@@ -35,7 +35,7 @@ function init() {
         title: '<b>OTU Ids To Sample Values </b>',
         xaxis: { title: "OTU Ids" },
         yaxis: { title: "Sample Values" }
-       
+
     };
     Plotly.newPlot("bubble", bubbleData, layoutBubble)
     // ----------------------------------------------------------
@@ -68,7 +68,7 @@ function updatePage() {
     var dropdownMenu = d3.selectAll("#selDataset").node();
     // Assign the dropdown menu option to a variable
     let selectedOption = dropdownMenu.value;
-    
+
     // filter data from the user 
     otuIdsFilter = sample.filter(row => row.id === selectedOption)[0];
 
@@ -107,7 +107,7 @@ function updatePage() {
         metadataFilter = metadata1.filter(row => row.id === parseInt(selectedOption))[0];
         console.log("metadataFilter", metadataFilter)
 
-       
+
         let para = ""
         for (var key in metadataFilter) {
             para += key + ": " + metadataFilter[key] + "<br>"
@@ -124,7 +124,7 @@ function updatePage() {
 
         // Trig to calc meter point
         var degrees = 9 - level;
-        // pointer lenght 
+        // pointer length
         radius = .5;
         var radians = degrees * Math.PI / 9;
         var x = radius * Math.cos(radians);
@@ -138,15 +138,14 @@ function updatePage() {
             pathEnd = ' Z';
         var path = mainPath.concat(pathX, space, pathY, pathEnd);
 
-        var gaugeData = [{
-            // pointer Spot place 
+        var gaugeData = [{ 
             type: 'scatter',
             x: [0], y: [0],
             marker: { size: 10, color: '850000' },
             showlegend: false,
             text: level,
             name: "times",
-            // infomation on the scatter spot
+            // information on the scatter plot
             hoverinfo: 'text+name'
         },
         {
@@ -158,7 +157,6 @@ function updatePage() {
             text: ['0-1', '1-2', '2-3', '3-4',
                 '4-5', '5-6', '6-7', '7-8', '8-9'],
             direction: 'clockwise',
-
             textinfo: 'text',
             textposition: 'side',
             marker: {
@@ -177,7 +175,7 @@ function updatePage() {
         }];
         var gaugelayout = {
             shapes: [{
-                
+
                 type: 'path',
                 path: path,
                 fillcolor: '850000',
@@ -186,9 +184,9 @@ function updatePage() {
                 }
             }],
             title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per week',
-            
+
             xaxis: {
-                
+
                 zeroline: false, showticklabels: false,
                 showgrid: false, range: [-1, 1]
             },
@@ -197,10 +195,8 @@ function updatePage() {
                 showgrid: false, range: [-1, 1]
             }
 
-
         }
 
-    
         Plotly.newPlot('gauge', gaugeData, gaugelayout);
 
     });
