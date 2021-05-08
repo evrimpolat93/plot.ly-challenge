@@ -76,7 +76,7 @@ function updatePage() {
     arrayOtu = otuIdsFilter.otu_ids;
     y = arrayOtu.slice(0, 10).map(yy => "OTU " + yy.toString()).reverse();
 
-    // values in x asis 
+    // values in x axis 
     arraySample = otuIdsFilter.sample_values;
     x = arraySample.slice(0, 10).reverse();
 
